@@ -1,6 +1,6 @@
 %define name pyPgSQL
 %define version 2.4
-%define release 3mdk
+%define release %mkrel 4
 
 #  automatically set GCC flags based on version
 %{expand:%%define gccmajorvers %(gcc -v 2>&1 | tail -1 | awk '{ print $3 }' | awk -F. '{ print $1 }')}
@@ -33,9 +33,7 @@ support for various PostgreSQL data types, such as INT8, NUMERIC, MONEY,
 BOOL, ARRAYS, etc. This module is written in Python.
 
 %prep
-rm -rf $RPM_BUILD_ROOT
-
-%setup -n pypgsql
+%setup -q -n pypgsql
 
 %patch -p1
 
@@ -63,3 +61,4 @@ rm -rf $RPM_BUILD_ROOT
 %doc README Announce ChangeLog
 %doc examples test
 %_libdir/python%pyver/site-packages/%{name}
+%_libdir/python%pyver/site-packages/*-info
