@@ -3,12 +3,7 @@
 %define release %mkrel 4
 
 #  automatically set GCC flags based on version
-%{expand:%%define gccmajorvers %(gcc -v 2>&1 | tail -1 | awk '{ print $3 }' | awk -F. '{ print $1 }')}
-%if %{gccmajorvers} >= 3
-%define cflags -std=c99 $RPM_OPT_FLAGS
-%else
-%define cflags $RPM_OPT_FLAGS
-%endif
+%define cflags -std=c99 %optflags
 
 Summary: pyPgSQL - A Python DB-API 2.0 compliant interface to PostgreSQL.
 Name: %{name}
