@@ -16,7 +16,7 @@ Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
 Url: http://pypgsql.sourceforge.net/
 Requires: egenix-mx-base , python >= 2.2 , postgresql
-BuildPrereq: python-devel , postgresql-devel
+BuildRequires: python-devel , postgresql-devel
 
 %description
 pyPgSQL is a package of two modules that provide a Python DB-API 2.0
