@@ -13,7 +13,6 @@ Source: http://telia.dl.sourceforge.net/sourceforge/pypgsql/%name-%{version}.tar
 Patch: pypgsql-2.3-mdk.patch.bz2
 License: BSD
 Group: Development/Python
-BuildRoot: %{_tmppath}/%{name}-buildroot
 Url: http://pypgsql.sourceforge.net/
 Requires: egenix-mx-base , python >= 2.2 , postgresql
 BuildRequires: python-devel , postgresql-devel
