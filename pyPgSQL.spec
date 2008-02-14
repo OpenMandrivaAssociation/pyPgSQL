@@ -5,7 +5,7 @@
 #  automatically set GCC flags based on version
 %define cflags -std=c99 %optflags
 
-Summary: pyPgSQL - A Python DB-API 2.0 compliant interface to PostgreSQL
+Summary: A Python DB-API 2.0 compliant interface to PostgreSQL
 Name: %{name}
 Version: %{version}
 Release: %{release}
