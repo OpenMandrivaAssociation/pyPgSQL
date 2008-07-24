@@ -1,6 +1,6 @@
 %define name pyPgSQL
 %define version 2.4
-%define release %mkrel 5
+%define release %mkrel 7
 
 #  automatically set GCC flags based on version
 %define cflags -std=c99 %optflags
