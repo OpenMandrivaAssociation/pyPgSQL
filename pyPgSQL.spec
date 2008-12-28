@@ -1,6 +1,6 @@
 %define name pyPgSQL
 %define version 2.4
-%define release %mkrel 8
+%define release %mkrel 9
 
 #  automatically set GCC flags based on version
 %define cflags -std=c99 %optflags
@@ -10,13 +10,14 @@ Name: %{name}
 Version: %{version}
 Release: %{release}
 Source: http://telia.dl.sourceforge.net/sourceforge/pypgsql/%name-%{version}.tar.bz2
-Patch: pypgsql-2.3-mdk.patch.bz2
+Patch: pypgsql-2.3-mdk.patch
 License: BSD
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
 Url: http://pypgsql.sourceforge.net/
-Requires: egenix-mx-base , python >= 2.2 , postgresql
-BuildRequires: python-devel , postgresql-devel
+Requires: egenix-mx-base
+%py_requires -d
+BuildRequires: postgresql-devel
 
 %description
 pyPgSQL is a package of two modules that provide a Python DB-API 2.0
