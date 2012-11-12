@@ -1,0 +1,23 @@
+diff -uNr pypgsql.orig/setup.py pypgsql/setup.py
+--- pypgsql.orig/setup.py	2003-04-06 23:34:16.000000000 -0400
++++ pypgsql/setup.py	2003-04-06 23:36:11.000000000 -0400
+@@ -80,7 +80,7 @@
+ 
+ def main():
+     # Set this to 1 if you need to use your own settings
+-    USE_CUSTOM = 0
++    USE_CUSTOM = 1 
+ 
+     # Default settings, may be overriden for specific platforms
+     pypgsql_rt_dirs = None
+@@ -96,8 +96,8 @@
+ 	"port/strtok.c"]
+ 
+     if USE_CUSTOM:
+-	include_dirs = YOUR_LIST_HERE
+-	library_dirs = YOUR_LIST_HERE
++	include_dirs = ["/usr/include/pgsql"]
++	library_dirs = ["/usr/lib/pgsql"] 
+     elif sys.platform == "linux2":
+ 	include_dirs = ["/usr/include", "/usr/include/postgresql",
+ 	    "/usr/include/pgsql"]
