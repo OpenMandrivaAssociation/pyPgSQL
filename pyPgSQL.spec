@@ -14,7 +14,7 @@ Patch: pypgsql-2.3-mdk.patch
 License: BSD
 Group: Development/Python
 BuildRoot: %{_tmppath}/%{name}-buildroot
-Url: http://pypgsql.sourceforge.net/
+Url: https://pypgsql.sourceforge.net/
 Requires: egenix-mx-base
 %py_requires -d
 BuildRequires: postgresql-devel
